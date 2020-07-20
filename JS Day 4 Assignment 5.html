@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter no of sales <input type="text" id="sales"> Enter price of each item<input type="text" id="price">
+    <input type="button" onclick="func()" value="Submit">
+    <p>Commision </p>
+    <p id="res"></p>
+    <script>
+        s = document.getElementById("sales").value;
+        p = document.getElementById("price").value;
+        sal = parseInt(s);
+        pri = parseInt(p);
+        func = () => {
+            console.log(sal);
+
+            if (sal <= 5000) {
+                let x = (sal * pri);
+                document.getElementById("res").innerHTML = x;
+                console.log(x);
+            }
+        }
+    </script>
+</body>
+
+</html>
