@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Mini Project Quote Generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<style>
+    h1 {
+        padding-left: 560px;
+        font-family: cursive;
+    }
+    
+    h3 {
+        padding-left: 540px;
+    }
+    
+    body {
+        background-image: url('https://i1.wp.com/supercopyeditors.com/blog/wp-content/uploads/2017/01/inspirational.jpg?fit=1489%2C1091&ssl=1');
+    }
+    
+    h2 {
+        margin-left: 200px;
+        margin-right: 200px;
+        transition: 200ms ease-in;
+        transition-delay: 3s;
+        animation-delay: 1s;
+        font-family: monospace;
+    }
+    
+    button {
+        border-radius: 6px;
+        opacity: 50;
+        background: none;
+        margin-left: 700px;
+        /* margin-top: 100px; */
+        border-width: 0.5;
+        position: sticky;
+    }
+</style>
+
+<body>
+    <h1>
+        Quote of the day!
+    </h1>
+    <h3>Let's start the day with some goodness</h3><br>
+    <button onclick="quotechange()">New Quote</button>
+    <div>
+        <h2 id="quote"></h2>
+    </div>
+
+    <!-- <audio controls autoplay>
+        <source src="../Music/Lightness Within (calm) [HQ].mp3" type="audio/mp3">
+    </audio> -->
+    <script>
+        var quote = ['Act as if what you do makes a difference. It does. - William James',
+            'Success is not final, failure is not fatal: it is the courage to continue that counts. - Winston Churchill',
+            'Never bend your head. Always hold it high. Look the world straight in the eye. - Helen Keller',
+            'What you get by achieving your goals is not as important as what you become by achieving your goals. - Zig Ziglar',
+            'Believe you can and you are halfway there. - Theodore Roosevelt',
+            'When you have a dream, you have got to grab it and never let go. - Carol Burnett',
+            'I cannot change the direction of the wind, but I can adjust my sails to always reach my destination. - Jimmy Dean',
+            'No matter what you are going through, there is a light at the end of the tunnel. - Demi Lovato',
+            'It is our attitude at the beginning of a difficult task which, more than anything else, will affect its successful outcome. - William James',
+            'Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein',
+        ]
+
+        document.getElementById("quote").innerHTML = quote[Math.floor(Math.random() * 10)];
+        // console.log(quote[Math.floor(Math.random() * 11)]);
+
+        function quotechange() {
+
+            document.getElementById("quote").innerHTML = quote[Math.floor(Math.random() * 10)];
+        }
+        quotechange();
+        // var currentIndex = 0;
+
+        // document.getElementById("quote").innerHTML = quote[currentIndex];
+        // setInterval(function() {
+
+        //     document.getElementById("quote").innerHTML = quote[currentIndex];
+
+        //     if (!quote[currentIndex]) {
+        //         currentIndex = 0;
+        //     } else {
+        //         currentIndex++;
+        //     }
+
+        // if (!quote[currentIndex]) {
+        //     currentIndex = 0;
+        // } else {
+        //     currentIndex++;
+        // }
+        // }, 3000);
+    </script>
+</body>
+
+</html>
